@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Show passwords",
+	"description": "Get rid of retyping password because you missed a single character!",
+	"author": "Milos Vujasinovic",
+	"version": "0.1.0",
+	"icons": {
+		"128": "icon128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*/*", "http://*/*"],
+			"js": ["script.js"]
+		}
+	],
+	"browser_action": {
+		"default_popup": "popup/popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"https://*/*",
+		"http://*/*",
+		"storage"
+	]
+}
